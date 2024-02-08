@@ -1,0 +1,51 @@
+{
+  "name": "quickinbox",
+  "version": "1.0.5",
+  "description": "Bulk Email Sender",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron-forge start",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "package:win": "electron-builder --win",
+    "package:mac": "electron-builder --mac",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "build": {
+    "appId": "com.quickinbox.emailer",
+    "mac": {
+      "target": "dmg",
+      "icon": "img/icon.icns"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "img/new.png"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "img/icon.png"
+    },
+    "directories": {
+      "output": "dist"
+    }
+  },
+  "author": "Quickinbox Emailer",
+  "license": "ISC",
+  "devDependencies": {
+    "@electron-forge/cli": "^7.2.0",
+    "@electron-forge/maker-deb": "^7.2.0",
+    "@electron-forge/maker-rpm": "^7.2.0",
+    "@electron-forge/maker-squirrel": "^7.2.0",
+    "@electron-forge/maker-zip": "^7.2.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.2.0",
+    "electron": "^25.4.0",
+    "electron-builder": "^24.9.1"
+  },
+  "dependencies": {
+    "electron-cookies": "^1.1.0",
+    "electron-json-storage": "^4.6.0",
+    "electron-squirrel-startup": "^1.0.0"
+  }
+}
